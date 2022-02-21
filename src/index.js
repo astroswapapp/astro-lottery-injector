@@ -5,7 +5,7 @@ const cron = require("node-cron");
 const { providers, Contract, BigNumber, Wallet } = require("ethers");
 
 const LotteryConfig = require("./config");
-const LotteryAbi = require("../abi/WagyuSwapLottery.json");
+const LotteryAbi = require("../abi/AstroSwapLottery.json");
 
 const app = express();
 
@@ -54,10 +54,10 @@ const startService = async () => {
     // run every day
 
     handleLottery("mainnet");
-    handleLottery("testnet");
+    // handleLottery("testnet");
   });
 
-  app.listen(3000, () => {
+  app.listen(4100, () => {
     console.log("====started===");
   });
 };

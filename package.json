@@ -1,8 +1,8 @@
 {
-  "name": "wagyu-lottery-injector",
+  "name": "astro-lottery-injector",
   "version": "1.0.0",
   "main": "index.js",
-  "repository": "git@github.com:wagyuswapapp/wagyu-lottery-injector.git",
+  "repository": "git@github.com:astroswapapp/astro-lottery-injector.git",
   "author": "Altbee <liaojikundever@gmail.com>",
   "license": "MIT",
   "dependencies": {
