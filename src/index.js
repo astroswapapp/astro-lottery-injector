@@ -36,7 +36,8 @@ const handleLottery = async (network) => {
 
       const txObject = await lotteryContract.injectFunds(
         currentRoundId,
-        amount
+        amount,
+        { gasLimit: 900000 }
       );
       await provider.waitForTransaction(txObject.hash);
 
@@ -48,7 +49,6 @@ const handleLottery = async (network) => {
 };
 
 const startService = async () => {
-  handleLottery("mainnet");
   cron.schedule("0 0 0 * * *", () => {
     console.log("==cron==", Date.now());
     // run every day
