@@ -49,9 +49,9 @@ const handleLottery = async (network) => {
 };
 
 const startService = async () => {
-  cron.schedule("0 0 0 * * *", () => {
+  cron.schedule("0 0 * * 1", () => {
     console.log("==cron==", Date.now());
-    // run every day
+    // run every Monday
 
     handleLottery("mainnet");
     // handleLottery("testnet");
